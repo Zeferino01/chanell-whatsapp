@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Free Football Tickets · WhatsApp Channel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;700&family=Barlow+Condensed:wght@800&display=swap" rel="stylesheet">
+<style>
+:root{--pitch:#0c3a29;--deep:#06231a;--line:rgba(255,255,255,.1);--paper:#fffbee;--ink:#10231a;--wa:#25d366;--red:#ff3b30}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;overflow:hidden}
+body{background:radial-gradient(120% 80% at 50% 40%,var(--pitch),var(--deep));color:var(--ink);font-family:'Barlow',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;display:flex;flex-direction:column;padding:env(safe-area-inset-top,0) env(safe-area-inset-right,0) env(safe-area-inset-bottom,0) env(safe-area-inset-left,0);position:relative}
+body::before{content:"";position:fixed;left:50%;top:50%;width:92vmin;height:92vmin;margin:-46vmin 0 0 -46vmin;border:2px solid var(--line);border-radius:50%;pointer-events:none}
+body::after{content:"";position:fixed;left:0;right:0;top:50%;border-top:2px solid var(--line);pointer-events:none}
+header{position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;padding:14px 18px}
+.brand{color:#fff;font:800 1.5rem/1 'Barlow Condensed','Arial Narrow',Impact,sans-serif;letter-spacing:.02em}
+.lang{position:relative}
+#langBtn{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 14px;font:700 .85rem 'Barlow',system-ui,sans-serif;cursor:pointer}
+#langBtn:focus-visible,.btn:focus-visible,#menu button:focus-visible{outline:3px solid #ffd23f;outline-offset:2px}
+#langBtn svg{width:18px;height:18px}
+#menu{position:absolute;top:calc(100% + 8px);inset-inline-end:0;width:220px;max-height:60dvh;overflow-y:auto;background:var(--paper);border-radius:14px;padding:6px;box-shadow:0 18px 40px rgba(0,0,0,.45);margin:0;list-style:none}
+#menu[hidden]{display:none}
+#menu button{width:100%;text-align:start;background:none;border:0;border-radius:9px;padding:10px 12px;font:600 1rem 'Barlow',system-ui,sans-serif;color:var(--ink);cursor:pointer}
+#menu button:hover,#menu button[aria-current="true"]{background:#dff3e5}
+main{position:relative;z-index:2;flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:0 16px 16px}
+.ticket{width:min(420px,100%);display:flex;flex-direction:column;filter:drop-shadow(0 22px 30px rgba(0,0,0,.45));animation:drop .6s cubic-bezier(.2,.8,.2,1) both}
+.top,.stub{background:var(--paper);padding:22px 22px 18px}
+.top{border-radius:22px 22px 0 0;-webkit-mask:radial-gradient(circle 12px at 0 100%,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 12px at 100% 100%,#0000 97%,#000) right/51% 100% no-repeat;mask:radial-gradient(circle 12px at 0 100%,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 12px at 100% 100%,#0000 97%,#000) right/51% 100% no-repeat}
+.stub{position:relative;border-radius:0 0 22px 22px;padding-top:20px;-webkit-mask:radial-gradient(circle 12px at 0 0,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 12px at 100% 0,#0000 97%,#000) right/51% 100% no-repeat;mask:radial-gradient(circle 12px at 0 0,#0000 97%,#000) left/51% 100% no-repeat,radial-gradient(circle 12px at 100% 0,#0000 97%,#000) right/51% 100% no-repeat}
+.stub::before{content:"";position:absolute;top:0;left:18px;right:18px;border-top:2px dashed rgba(16,35,26,.28)}
+.live{display:inline-flex;align-items:center;gap:7px;background:var(--red);color:#fff;border-radius:999px;padding:4px 11px 4px 9px;font:700 .75rem/1 'Barlow',sans-serif;letter-spacing:.06em}
+.live i{width:8px;height:8px;border-radius:50%;background:#fff;animation:blink 1.1s infinite}
+h1{margin:12px 0 8px;font:800 clamp(1.9rem,8.4vw,2.7rem)/1.02 'Barlow Condensed','Arial Narrow',Impact,sans-serif}
+.sub{margin:0 0 14px;font-size:clamp(.95rem,3.8vw,1.05rem);line-height:1.4;color:#30463b}
+.chips{display:flex;flex-wrap:wrap;gap:7px;padding:0;margin:0;list-style:none}
+.chips li{background:#dff3e5;border-radius:999px;padding:6px 12px;font-weight:700;font-size:.82rem}
+.chips li::before{content:"✓ ";color:#128c4a}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:var(--wa);color:#04210f;text-decoration:none;font:700 1.12rem 'Barlow',system-ui,sans-serif;padding:17px 14px;border-radius:14px;animation:pulse 1.8s infinite}
+.btn svg{width:24px;height:24px;flex:none}
+.note{margin:11px 0 0;text-align:center;font-size:.8rem;color:#4b6256}
+@keyframes drop{from{transform:translateY(-14px);opacity:0}to{transform:none;opacity:1}}
+@keyframes blink{50%{opacity:.25}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.65)}70%,100%{box-shadow:0 0 0 16px rgba(37,211,102,0)}}
+@media (max-height:560px){.top{padding:14px 18px 12px}.stub{padding:16px 18px 12px}h1{font-size:1.6rem;margin:8px 0 6px}.sub{font-size:.88rem;margin-bottom:9px}.btn{padding:13px}header{padding:8px 14px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand" id="brand">⚽ TicketLive</div>
+  <div class="lang">
+    <button id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Language">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
+      <span id="langName">English</span>
+    </button>
+    <ul id="menu" hidden></ul>
+  </div>
+</header>
+
+<main>
+  <section class="ticket">
+    <div class="top">
+      <span class="live"><i></i>LIVE</span>
+      <h1 id="t"></h1>
+      <p class="sub" id="s"></p>
+      <ul class="chips"><li id="c1"></li><li id="c2"></li><li id="c3"></li></ul>
+    </div>
+    <div class="stub">
+      <a class="btn" id="cta" href="#" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>
+        <span id="b"></span>
+      </a>
+      <p class="note" id="n"></p>
+    </div>
+  </section>
+</main>
+
+<script>
+/* ===== CONFIG ===== */
+const CONFIG = {
+  channelUrl: "https://whatsapp.com/channel/0029Vb7avjw545v5CGyAjV2S",
+  brand: "⚽ TicketLive",
+  pixelId: "" // Meta Pixel ID (opcional)
+};
+
+/* [nome, dir, título, subtítulo, chip1, chip2, chip3, botão, nota] */
+const L = {
+en:["English","ltr","Free football tickets, straight to your WhatsApp","Join the channel for live match updates, team news and free tickets every day.","Free tickets","Live matches","Team updates","Join the free channel","Free to join · Leave anytime"],
+pt:["Português","ltr","Bilhetes de futebol grátis, direto no seu WhatsApp","Entre no canal para receber jogos ao vivo, novidades das equipas e bilhetes grátis todos os dias.","Bilhetes grátis","Jogos ao vivo","Novidades das equipas","Entrar no canal grátis","Grátis · Saia quando quiser"],
+es:["Español","ltr","Boletos de fútbol gratis, directo a tu WhatsApp","Únete al canal y recibe partidos en vivo, noticias de equipos y boletos gratis cada día.","Boletos gratis","Partidos en vivo","Novedades de equipos","Unirme al canal gratis","Gratis · Sal cuando quieras"],
+fr:["Français","ltr","Billets de foot gratuits, directement sur WhatsApp","Rejoignez la chaîne pour les matchs en direct, l’actu des équipes et des billets gratuits chaque jour.","Billets gratuits","Matchs en direct","Actu des équipes","Rejoindre la chaîne gratuite","Gratuit · Quittez quand vous voulez"],
+de:["Deutsch","ltr","Gratis-Fußballtickets, direkt auf dein WhatsApp","Tritt dem Kanal bei: Live-Spiele, Team-News und jeden Tag kostenlose Tickets.","Gratis-Tickets","Live-Spiele","Team-News","Kostenlosen Kanal beitreten","Kostenlos · Jederzeit verlassen"],
+it:["Italiano","ltr","Biglietti di calcio gratis, direttamente su WhatsApp","Entra nel canale per partite in diretta, novità sulle squadre e biglietti gratis ogni giorno.","Biglietti gratis","Partite in diretta","Novità sulle squadre","Entra nel canale gratuito","Gratis · Esci quando vuoi"],
+ar:["العربية","rtl","تذاكر كرة قدم مجانية مباشرة على واتساب","انضم إلى القناة لتتابع المباريات المباشرة وأخبار الفرق وتذاكر مجانية كل يوم.","تذاكر مجانية","مباريات مباشرة","أخبار الفرق","انضم إلى القناة المجانية","مجاني · غادر متى شئت"],
+ru:["Русский","ltr","Бесплатные билеты на футбол прямо в WhatsApp","Вступайте в канал: матчи в прямом эфире, новости команд и бесплатные билеты каждый день.","Бесплатные билеты","Матчи онлайн","Новости команд","Вступить в канал","Бесплатно · Выйти можно в любой момент"],
+zh:["中文","ltr","免费足球票，直达你的 WhatsApp","加入频道，每天获取比赛直播、球队动态和免费球票。","免费球票","比赛直播","球队动态","加入免费频道","免费加入 · 随时退出"],
+hi:["हिन्दी","ltr","मुफ़्त फ़ुटबॉल टिकट, सीधे आपके WhatsApp पर","चैनल से जुड़ें और हर दिन लाइव मैच अपडेट, टीम की ख़बरें और मुफ़्त टिकट पाएँ।","मुफ़्त टिकट","लाइव मैच","टीम अपडेट","मुफ़्त चैनल से जुड़ें","मुफ़्त · जब चाहें छोड़ें"],
+sw:["Kiswahili","ltr","Tiketi za mpira bila malipo, moja kwa moja WhatsApp","Jiunge na kituo upate mechi za moja kwa moja, habari za timu na tiketi za bure kila siku.","Tiketi za bure","Mechi live","Habari za timu","Jiunge na kituo bure","Bure · Ondoka wakati wowote"],
+tr:["Türkçe","ltr","Ücretsiz futbol biletleri, doğrudan WhatsApp’ında","Kanala katıl: canlı maçlar, takım haberleri ve her gün ücretsiz biletler.","Ücretsiz bilet","Canlı maçlar","Takım haberleri","Ücretsiz kanala katıl","Ücretsiz · İstediğin zaman ayrıl"],
+id:["Bahasa Indonesia","ltr","Tiket sepak bola gratis, langsung ke WhatsApp kamu","Gabung saluran untuk pertandingan live, kabar tim, dan tiket gratis setiap hari.","Tiket gratis","Laga live","Kabar tim","Gabung saluran gratis","Gratis · Keluar kapan saja"],
+ja:["日本語","ltr","無料のサッカーチケットをWhatsAppに直接お届け","チャンネルに参加して、試合のライブ情報、チームニュース、無料チケットを毎日受け取ろう。","無料チケット","ライブ試合","チーム情報","無料チャンネルに参加","無料 · いつでも退会OK"],
+ko:["한국어","ltr","무료 축구 티켓을 WhatsApp으로 바로 받으세요","채널에 참여하고 실시간 경기, 팀 소식, 무료 티켓을 매일 받아보세요.","무료 티켓","실시간 경기","팀 소식","무료 채널 참여하기","무료 · 언제든 나갈 수 있어요"],
+pl:["Polski","ltr","Darmowe bilety na mecze prosto na Twój WhatsApp","Dołącz do kanału: mecze na żywo, wieści z drużyn i darmowe bilety każdego dnia.","Darmowe bilety","Mecze na żywo","Wieści z drużyn","Dołącz do darmowego kanału","Za darmo · Wyjdziesz, kiedy chcesz"],
+vi:["Tiếng Việt","ltr","Vé bóng đá miễn phí, gửi thẳng vào WhatsApp của bạn","Tham gia kênh để xem trận đấu trực tiếp, tin đội bóng và vé miễn phí mỗi ngày.","Vé miễn phí","Trận đấu trực tiếp","Tin đội bóng","Tham gia kênh miễn phí","Miễn phí · Rời đi bất cứ lúc nào"],
+th:["ไทย","ltr","ตั๋วฟุตบอลฟรี ส่งตรงถึง WhatsApp ของคุณ","เข้าร่วมช่องเพื่อรับไลฟ์การแข่งขัน ข่าวทีม และตั๋วฟรีทุกวัน","ตั๋วฟรี","แข่งสด","ข่าวทีม","เข้าร่วมช่องฟรี","ฟรี · ออกได้ทุกเมื่อ"],
+bn:["বাংলা","ltr","বিনামূল্যে ফুটবল টিকিট, সরাসরি আপনার WhatsApp-এ","চ্যানেলে যোগ দিন, প্রতিদিন পান লাইভ ম্যাচ আপডেট, দলের খবর ও বিনামূল্যে টিকিট।","বিনামূল্যে টিকিট","লাইভ ম্যাচ","দলের খবর","ফ্রি চ্যানেলে যোগ দিন","বিনামূল্যে · যেকোনো সময় ছাড়ুন"],
+ur:["اردو","rtl","مفت فٹ بال ٹکٹ، سیدھے آپ کے WhatsApp پر","چینل جوائن کریں اور ہر روز لائیو میچ اپڈیٹس، ٹیم کی خبریں اور مفت ٹکٹ پائیں۔","مفت ٹکٹ","لائیو میچ","ٹیم اپڈیٹس","مفت چینل جوائن کریں","مفت · جب چاہیں چھوڑیں"],
+fa:["فارسی","rtl","بلیت فوتبال رایگان، مستقیم در واتس‌اپ شما","به کانال بپیوندید و هر روز بازی‌های زنده، اخبار تیم‌ها و بلیت رایگان بگیرید.","بلیت رایگان","بازی زنده","اخبار تیم‌ها","عضویت در کانال رایگان","رایگان · هر زمان خواستید خارج شوید"],
+zu:["isiZulu","ltr","Amathikithi ebhola mahhala, aqonde ku-WhatsApp yakho","Joyina isiteshi uthole imidlalo bukhoma, izindaba zamaqembu namathikithi mahhala nsuku zonke.","Amathikithi mahhala","Imidlalo bukhoma","Izindaba zamaqembu","Joyina isiteshi mahhala","Mahhala · Phuma noma nini"]
+};
+
+const $ = id => document.getElementById(id);
+const ids = ["t","s","c1","c2","c3","b","n"];
+
+function setLang(code, save){
+  const a = L[code] || L.en;
+  document.documentElement.lang = code;
+  document.documentElement.dir = a[1];
+  ids.forEach((id,i) => $(id).textContent = a[i+2]);
+  $("langName").textContent = a[0];
+  document.querySelectorAll("#menu button").forEach(b => b.setAttribute("aria-current", b.dataset.code === code));
+  if (save) { try { localStorage.setItem("lang", code); } catch(e){} }
+}
+
+function detect(){
+  try { const s = localStorage.getItem("lang"); if (L[s]) return s; } catch(e){}
+  for (const l of (navigator.languages || [navigator.language || "en"])) {
+    const c = l.slice(0,2).toLowerCase();
+    if (L[c]) return c;
+  }
+  return "en";
+}
+
+const menu = $("menu"), btn = $("langBtn");
+Object.keys(L).forEach(code => {
+  const li = document.createElement("li"), b = document.createElement("button");
+  b.textContent = L[code][0]; b.dataset.code = code; b.type = "button";
+  b.onclick = () => { manual = true; setLang(code, true); toggle(false); };
+  li.appendChild(b); menu.appendChild(li);
+});
+function toggle(open){ menu.hidden = !open; btn.setAttribute("aria-expanded", open); }
+btn.onclick = e => { e.stopPropagation(); toggle(menu.hidden); };
+document.addEventListener("click", e => { if (!menu.contains(e.target)) toggle(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") toggle(false); });
+
+$("brand").textContent = CONFIG.brand;
+$("cta").href = CONFIG.channelUrl;
+let manual = false;
+try { manual = !!L[localStorage.getItem("lang")]; } catch(e){}
+setLang(detect(), false);
+
+/* ===== Idioma automático pelo país do IP ===== */
+const G = {
+  pt:"BR PT MZ AO CV GW ST TL",
+  es:"ES MX AR CO CL PE VE EC GT CU BO DO HN PY SV NI CR PA UY PR GQ",
+  fr:"FR BE MC LU SN CI CM ML BF NE TG BJ GN MG CD CG GA HT DJ",
+  de:"DE AT CH LI",
+  it:"IT SM VA",
+  ar:"SA AE EG IQ JO KW QA BH OM YE SY LB LY TN DZ MA SD PS MR",
+  ru:"RU BY KZ KG",
+  zh:"CN TW HK MO",
+  hi:"IN", sw:"KE TZ UG", tr:"TR", id:"ID", ja:"JP", ko:"KR",
+  pl:"PL", vi:"VN", th:"TH", bn:"BD", ur:"PK", fa:"IR"
+};
+const C = {};
+Object.keys(G).forEach(k => G[k].split(" ").forEach(c => C[c] = k));
+
+function getJson(url){
+  const ac = new AbortController(), t = setTimeout(() => ac.abort(), 3000);
+  return fetch(url, {signal: ac.signal}).then(r => r.json()).finally(() => clearTimeout(t));
+}
+async function getCountry(){
+  try { const s = sessionStorage.getItem("geo"); if (s) return s; } catch(e){}
+  let c = "";
+  try { c = (await getJson("https://get.geojs.io/v1/ip/country.json")).country; } catch(e){}
+  if (!c) { try { c = (await getJson("https://ipapi.co/json/")).country_code; } catch(e){} }
+  c = (c || "").toUpperCase();
+  if (c) { try { sessionStorage.setItem("geo", c); } catch(e){} }
+  return c;
+}
+/* Se o visitante ainda não escolheu idioma, usa o do país dele; sem correspondência, mantém o do navegador */
+if (!manual) getCountry().then(c => { const code = C[c]; if (code && !manual) setLang(code, false); });
+
+/* Meta Pixel (opcional) */
+if (CONFIG.pixelId) {
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', CONFIG.pixelId); fbq('track', 'PageView');
+  $("cta").addEventListener("click", () => fbq('track', 'Lead'));
+}
+</script>
+</body>
+</html>
